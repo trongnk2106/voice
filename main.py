@@ -80,6 +80,7 @@ async def main():
                 prompt_preamble="""You are an excellent translator, please translate the input language is VietNames language into English language, Only answer the translation part and do not include any other information.""",
             )
         ),
+        # vo class ElevenLabsSynthesizer, comment tu dong 45 -> 61, sau do them : self.output_format = "pcm_24000"
         synthesizer=ElevenLabsSynthesizer(
             ElevenLabsSynthesizerConfig.from_output_device(output_device = speaker_output,
                                                             api_key=settings.elevenlabs_api_key,
